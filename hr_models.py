@@ -1,25 +1,8 @@
-# -*- coding: utf-8 -*-
+# Kim Duy Vương
+# 20237410
 """
-hr_models.py
-============
-Lab 03-04 - Bài 2: NHÓM DỰ ÁN VÀ NHÂN SỰ (Python 3.8+)
+Lab 03-04 - Bài 2: NHÓM DỰ ÁN VÀ NHÂN SỰ 
 
-Ghi chú về "nạp chồng" (overloading) trong Python
--------------------------------------------------
-Python không cho định nghĩa nhiều hàm cùng tên khác chữ ký như C++. Module này
-mô phỏng nạp chồng bằng ba kỹ thuật kết hợp:
-
-  * @typing.overload           : khai báo từng chữ ký hợp lệ (IDE / mypy nhìn thấy);
-  * *args + kiểm tra số lượng : dùng cho constructor (0/2/3 tham số, 2/3 tham số...);
-  * tham số mặc định          : dùng cho increase_salary() và add_member().
-
-Ghi chú về "destructor" và "liên kết không sở hữu"
---------------------------------------------------
-  * __del__ đóng vai trò destructor (CPython gọi ngay khi bộ đếm tham chiếu về 0).
-  * ProjectTeam chỉ giữ *tham chiếu* tới Employee; khi nhóm bị hủy, nó chỉ thả các
-    tham chiếu của chính nó. Employee vẫn sống chừng nào còn biến khác tham chiếu tới.
-  * Python không tự gọi __del__ của lớp cha, nên SoftwareEngineer.__del__ gọi
-    super().__del__() để có thứ tự hủy giống C++ (lớp con trước, lớp cha sau).
 """
 from __future__ import annotations
 
